@@ -1,7 +1,7 @@
 const allowedCors = [
-  'https://mesto.gorod.nomoredomains.work',
+  'https://mesto.gorod.nomoredomains.work/',
   'http://mesto.gorod.nomoredomains.work/',
-  'localhost:3000',
+  'localhost:3001',
 ];
 
 const allowOrigin = (req, res, next) => {
