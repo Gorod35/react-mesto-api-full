@@ -4,6 +4,7 @@ const { celebrate, Joi, errors } = require('celebrate');
 const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
+const cors = require('cors');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const { createUser, login } = require('./controllers/users');
@@ -19,6 +20,8 @@ const { PORT = 3000 } = process.env;
 
 mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://localhost:27017/mestodb');
+
+app.use(cors());
 
 app.use(express.json());
 app.use(requestLogger);
