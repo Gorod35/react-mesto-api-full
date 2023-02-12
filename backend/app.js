@@ -11,6 +11,9 @@ const auth = require('./middlewares/auth');
 const linkCheck = require('./constants/constant');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const {
+  allowOrigin, allowOptions,
+} = require('./middlewares/cors');
 
 const { PORT = 3000 } = process.env;
 
@@ -40,6 +43,9 @@ app.post('/signin', celebrate({
 app.use(auth);
 app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
+
+app.use(allowOrigin);
+app.use(allowOptions);
 
 app.use(errorLogger);
 
