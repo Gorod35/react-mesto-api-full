@@ -18,8 +18,8 @@ const { PORT = 3000 } = process.env;
 const options = {
   origin: [
     'http://localhost:3000',
-    'https://mesto.gorod.nomoredomains.work/',
-    'http://mesto.gorod.nomoredomains.work/',
+    'https://mesto.gorod.nomoredomains.work',
+    'http://mesto.gorod.nomoredomains.work',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
