@@ -4,40 +4,36 @@ const { celebrate, Joi, errors } = require('celebrate');
 const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
+const cors = require('cors');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
-const { linkCheck, allowedCors } = require('./constants/constant');
+const linkCheck = require('./constants/constant');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3000 } = process.env;
+
+const options = {
+  origin: [
+    'http://localhost:3000',
+    'https://mesto.gorod.nomoredomains.work/',
+    'http://mesto.gorod.nomoredomains.work/',
+  ],
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
+  credentials: true,
+};
+app.use('*', cors(options));
 
 mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(express.json());
 app.use(requestLogger);
-
-app.use((req, res, next) => {
-  const { method } = req;
-  const { origin } = req.headers;
-  const requestHeaders = req.headers['access-control-request-headers'];
-  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
-
-  if (allowedCors.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-    res.header('Access-Control-Allow-Credentials', true);
-  }
-  if (method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Headers', requestHeaders);
-    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
-    return res.end();
-  }
-
-  return next();
-});
 
 app.get('/crash-test', () => {
   setTimeout(() => {
