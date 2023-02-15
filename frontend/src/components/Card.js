@@ -12,6 +12,7 @@ class Card extends React.Component {
 
     handleLikeClick = () => {
         this.props.onCardLike(this.props.card);
+        console.log(this.props.card);
     }
 
     handleDeleteClick = () => {
@@ -19,7 +20,7 @@ class Card extends React.Component {
     }
 
     isOwn = () => {
-        return (this.props.card.owner._id === this.context._id)
+        return (this.props.card.owner === this.context._id)
     }
 
     isLiked = () => {
