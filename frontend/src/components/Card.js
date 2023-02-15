@@ -12,7 +12,6 @@ class Card extends React.Component {
 
     handleLikeClick = () => {
         this.props.onCardLike(this.props.card);
-        console.log(this.props.card);
     }
 
     handleDeleteClick = () => {
