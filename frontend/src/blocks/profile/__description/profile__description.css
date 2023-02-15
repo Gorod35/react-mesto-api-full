@@ -1,0 +1,10 @@
+.profile__description {
+    box-sizing: border-box;
+    max-width: 336px;
+}
+
+@media screen and (max-width: 492px) {
+    .profile__description {
+        width: 100%;
+    }
+}

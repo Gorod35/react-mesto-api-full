@@ -1,0 +1,13 @@
+.popup__content {
+    width: clamp(282px, calc(282px + (((100vw - 320px) * 148) / 960)), 430px);
+    min-height: clamp(322px, calc(322px + (((100vw - 320px) * 8) / 960)), 330px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: clamp(25px, calc(25px + (((100vw - 320px) * 9) / 960)), 34px) clamp(22px, calc(22px + (((100vw - 320px) * 14) / 960)), 36px) clamp(25px, calc(25px + (((100vw - 320px) * 12) / 960)), 37px);
+    box-sizing: border-box;
+}

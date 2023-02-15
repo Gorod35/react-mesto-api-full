@@ -1,0 +1,23 @@
+.header {
+    max-width: 880px;
+    width: calc(320px + (((100vw - 320px) * 560) / 960));
+    padding-top: calc(28px + (((100vw - 320px) * 17) / 960));
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    padding-bottom: clamp(30.6px, calc(30.6px + (((100vw - 320px) * 9.4) / 960)), 40px);
+    margin-bottom: calc(38.25px - (((100vw - 320px) * 2) / 960));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 492px) {
+    .header {
+        padding-bottom: 28px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header.active {
+        margin-top: 143px;
+    }
+}

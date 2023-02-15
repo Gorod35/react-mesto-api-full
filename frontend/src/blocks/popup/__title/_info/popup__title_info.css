@@ -1,0 +1,5 @@
+.popup__title_info {
+    text-align: center;
+    font-size: clamp(20px, calc(20px + (((100vw - 320px) * 4) / 960)), 24px);
+    line-height: 1.21;
+}

@@ -1,0 +1,11 @@
+.register__link {
+    color: white;
+    font-size: 14px;
+    line-height: 1.21;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register__link:hover {
+    text-decoration: underline;
+}

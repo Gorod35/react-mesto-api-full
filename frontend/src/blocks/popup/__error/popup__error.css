@@ -1,0 +1,8 @@
+.popup__error {
+    max-width: 358px;
+    font-size: 12px;
+    line-height: 1.21;
+    color: #FF0000;
+    display: inline;
+    padding-top: 5px;
+}

@@ -1,0 +1,11 @@
+.card__items {
+    box-sizing: border-box;
+    width: clamp(282px, calc(282px + (((100vw - 320px) * 598) / 960)), 880px);
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 282px));
+    justify-content: center;
+    gap: 20px clamp(0px, calc(0px + (((100vw - 320px) * 17) / 960)), 17px);
+    padding: 0;
+    margin: 0 auto;
+}

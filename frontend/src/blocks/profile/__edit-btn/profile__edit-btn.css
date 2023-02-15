@@ -1,0 +1,15 @@
+.profile__edit-btn {
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    background-image: url(../../../images/edit-icon.svg);
+    padding: clamp(9px, calc(9px + (((100vw - 320px) * 2) / 960)), 11px);
+    background-size: clamp(7.5px, calc(7.5px + (((100vw - 320px) * 2.5) / 960)), 10px);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: opacity ease 0.5s;
+}
+
+.profile__edit-btn:hover{
+    opacity: 0.6;
+}

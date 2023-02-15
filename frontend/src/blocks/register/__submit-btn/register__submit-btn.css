@@ -1,0 +1,16 @@
+.register__submit-btn {
+    width: clamp(260px, calc(260px + (((100vw - 320px) * 98) / 960)), 358px);
+    padding: 0px;
+    min-height: clamp(46px, calc(46px + (((100vw - 320px) * 4) / 960)), 50px);
+    margin-bottom: clamp(15px, calc(15px + (((100vw - 320px) * 5) / 960)), 20px);
+    border-radius: 2px;
+    border: 1px solid white;
+    font-size: clamp(16px, calc(16px + (((100vw - 320px) * 2) / 960)), 18px);
+    line-height: 1.21;
+    transition: opacity .2s ease;
+}
+
+.register__submit-btn:hover {
+    opacity: .85;
+    cursor: pointer;
+}

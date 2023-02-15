@@ -1,0 +1,8 @@
+.register__title {
+    text-align: center;
+    font-size: clamp(20px, calc(20px + (((100vw - 320px) * 4) / 960)), 24px);
+    line-height: 1.21;
+    margin: 0;
+    padding-top: clamp(1.75px, calc(1.75px + (((100vw - 320px) * 22) / 960)), 23.75px);
+    padding-bottom: clamp(40px, calc(40px + (((100vw - 320px) * 10) / 960)), 50px);
+}

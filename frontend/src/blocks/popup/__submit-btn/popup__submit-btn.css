@@ -1,0 +1,19 @@
+.popup__submit-btn {
+    width: clamp(238px, calc(238px + (((100vw - 320px) * 120) / 960)), 358px);
+    height: clamp(46px, calc(46px + (((100vw - 320px) * 4) / 960)), 50px);
+    background: #000000;
+    background-position: center;
+    border-radius: 2px;
+    border: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: clamp(14px, calc(14px + (((100vw - 320px) * 4) / 960)), 18px);
+    line-height: 1.21;
+    margin-top: clamp(15px, calc(15px + (((100vw - 320px) * 3) / 960)), 18px);
+    transition: opacity ease 0.5s;
+}
+
+.popup__submit-btn:not([disabled]):hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

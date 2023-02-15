@@ -1,0 +1,17 @@
+.profile__title {
+    font-weight: 500;
+    font-size: clamp(27px, calc(27px + (((100vw - 320px) * 15) / 960)), 42px);
+    line-height: clamp(2.0425rem, 1.7233rem + 1.5958vw, 3rem);
+    color: #FFFFFF;
+    padding-right: clamp(10px, calc(7.5px + (((100vw - 320px) * 8) / 960)), 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+@media screen and (max-width: 492px) {
+    .profile__title {
+        text-align: center;
+    }
+}

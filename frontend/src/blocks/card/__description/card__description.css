@@ -1,0 +1,12 @@
+.card__description {
+    max-width: 246px;
+    min-height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 21px 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

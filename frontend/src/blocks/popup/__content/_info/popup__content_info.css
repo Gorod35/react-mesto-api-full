@@ -1,0 +1,5 @@
+.popup__content_info {
+    min-height: clamp(308px, calc(308px + (((100vw - 320px) * 22) / 960)), 330px);
+    align-items: center;
+    padding: clamp(50px, calc(50px + (((100vw - 320px) * 10) / 960)), 60px) clamp(18px, calc(18px + (((100vw - 320px) * 18) / 960)), 36px);
+}

@@ -1,0 +1,11 @@
+.header__link {
+    font-size: clamp(14px, calc(14px + (((100vw - 320px) * 4) / 960)), 18px);
+    line-height: 22px;
+    color: white;
+    text-decoration: none;
+    padding-right: calc(30px - (((100vw - 320px) * 170) / 960));
+}
+
+.header__link:hover {
+    text-decoration: underline;
+}

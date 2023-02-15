@@ -1,0 +1,20 @@
+.popup__close-btn {
+    width: clamp(20px, calc(20px + (((100vw - 320px) * 12) / 960)), 32px);
+    height: clamp(20px, calc(20px + (((100vw - 320px) * 12) / 960)), 32px);
+    background-image: url(../../../images/close-btn.svg);
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    --calctop: clamp(41px, calc(41px + (((100vw - 320px) * 1) / 960)), 42px);
+    --calcright: clamp(2px, calc(2px + (((100vw - 320px) * 42) / 960)), 44px);
+    top: calc((-1)*var(--calctop));
+    right: calc((-1)*var(--calcright));
+    transition: opacity ease 0.5s;
+}
+
+.popup__close-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

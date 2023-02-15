@@ -1,0 +1,6 @@
+.profile__name-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: clamp(14px, calc(14px + (((100vw - 320px) * 2) / 960)), 16px);
+}

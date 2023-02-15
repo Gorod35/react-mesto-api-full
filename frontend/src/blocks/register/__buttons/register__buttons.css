@@ -1,0 +1,5 @@
+.register__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: clamp(40px, calc(40px + (((100vw - 320px) * 40) / 960)), 80px);
+}

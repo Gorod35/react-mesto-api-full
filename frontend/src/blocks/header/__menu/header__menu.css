@@ -1,0 +1,22 @@
+.header__menu {
+    visibility: hidden;
+    transition: visibility .2s ease;
+}
+
+@media screen and (max-width: 492px) {
+
+    .header__menu {
+        position: fixed;
+        top: -143px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        border-bottom: 1px solid rgb(84, 84, 84, .7);
+        z-index: 1;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__menu.active {
+        top: 0;
+    }
+}

@@ -1,0 +1,3 @@
+.card {
+    padding-bottom: clamp(48px, calc(48px + (((100vw - 320px) * 19) / 960)), 67px);
+}
